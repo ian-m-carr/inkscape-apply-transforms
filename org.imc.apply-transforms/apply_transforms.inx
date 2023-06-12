@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+  <name>Apply (and remove) transforms recursively</name>
+  <id>org.imc.apply-transforms</id>
+  <object-type>Group</object-type>
+  <param name="apply-to-paths" type="bool"
+         gui-text="If true transform the path nodes (stroke width is not affected so may appear different!) If false then the path will be given an individual transformation matrix.">true</param>
+  <param name="apply-to-shapes" type="bool"
+         gui-text="If true transform substitute shapes with paths then transform the path nodes (stroke width is not affected so may appear different!) If false then the path will be given an individual transformation matrix.">true</param>
+  <effect>
+    <effects-menu>
+       <submenu name="Transforms"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command location="inx" interpreter="python">apply-transforms.py</command>
+  </script>
+</inkscape-extension>
